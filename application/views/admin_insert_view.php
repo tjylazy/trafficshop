@@ -66,47 +66,59 @@
           </div>
         </div><!--/span-->
       </div><!--/row-->
-	  <form class="form-horizontal" role="form">
+	  <form class="form-horizontal" role="form" action = "../admin/generate" method = "post">
   <div class="form-group">
     <label for="Name" class="col-sm-2 control-label">被处罚人</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="Name" placeholder="被处罚人">
+      <input type="text" class="form-control" id="Name" name = "Name" placeholder="被处罚人" required>
     </div>
   </div>
   <div class="form-group">
     <label for="ID" class="col-sm-2 control-label">身份证号</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="ID" placeholder="身份证号">
+      <input type="text" class="form-control" id="ID" name = "ID" placeholder="身份证号" required>
     </div>
   </div>
   <div class="form-group">
     <label for="Contact" class="col-sm-2 control-label">联系方式</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="Contact" placeholder="联系方式">
+      <input type="text" class="form-control" id="Contact" name = "Contact" placeholder="联系方式" required>
     </div>
   </div>
    <div class="form-group">
     <label for="Carnum" class="col-sm-2 control-label">车辆牌号</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="Carnum" placeholder="车辆牌号">
+      <input type="text" class="form-control" id="Carnum" name = "Carnum" placeholder="车辆牌号" required>
     </div>
   </div>
    <div class="form-group">
     <label for="Cartype" class="col-sm-2 control-label">车辆类型</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="Cartype" placeholder="车辆类型">
+      <input type="text" class="form-control" id="Cartype" name = "Cartype" placeholder="车辆类型" required>
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="Fineposition" class="col-sm-2 control-label">违规地点</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="Fineposition" name = "Fineposition" placeholder="违规地点" required>
+    </div>
+  </div>
+   <div class="form-group">
+    <label for="Finetime" class="col-sm-2 control-label">违规时间</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="Finetime" name = "Finetime" placeholder="违规时间" required>
     </div>
   </div>
     <div class="form-group">
     <label for="Finecontent" class="col-sm-2 control-label">详情描述</label>
     <div class="col-sm-6">
-      <textarea rows="3" class="form-control" id="Finecontent"> </textarea>
+      <textarea rows="3" class="form-control" id="Finecontent" name = "Finecontent" > </textarea>
     </div>
   </div>
     <div class="form-group">
     <label for="Finetype" class="col-sm-2 control-label">违反条例</label>
     <div class="col-sm-6">
-      <select class="form-control" id = "Finetype" onchange = "CalFine()">
+      <select class="form-control" id = "Finetype" name = "Finetype" onchange = "CalFine()" required> 
 		<option></option>
 		<option>闯红灯</option>
 		<option>不系安全带</option>
@@ -119,13 +131,13 @@
   <div class="form-group">
     <label for="Fine" class="col-sm-2 control-label">处罚金额</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="Fine" placeholder="处罚金额" disabled>
+      <input type="text" class="form-control" id="Fine" name = "Fine" placeholder="处罚金额" readonly>
     </div>
   </div>
   <div class="form-group">
     <label for="Finescore" class="col-sm-2 control-label">处罚分数</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" id="Finescore" placeholder="处罚分数" disabled>
+      <input type="text" class="form-control" id="Finescore" name = "Finescore" placeholder="处罚分数" readonly>
     </div>
   </div>
 

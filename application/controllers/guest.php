@@ -11,6 +11,11 @@ class Guest extends CI_Controller {
 	{
 		$this->load->view('guest_view');
 	}
+	
+	public function retrieve()
+	{
+		$this->load->view('guest_retrieve_view');
+	}
 }
 
 /* End of file welcome.php */

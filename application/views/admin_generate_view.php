@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../dist/docs-assets/ico/favicon.png">
 
-    <title>客户系统</title>
+    <title>管理员系统</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,12 +31,6 @@
     <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="#">交通网店</a>
         </div>
         <div class="collapse navbar-collapse">
@@ -58,34 +52,80 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="jumbotron">
-            <h1>客户，欢迎使用</h1>
+            <h2>您可以录入交通违章信息，并生成交通处罚决定书</h2>
           </div>
-          <div class="row">
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>功能提示</h2>
-              <p>您可以在其中查询违章信息和证据。</p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>功能提示</h2>
-              <p>您若对决定书不服可提出上诉。 </p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>功能提示</h2>
-              <p>您可以在本平台进行罚单支付。 </p>
-            </div><!--/span-->
-          </div><!--/row-->
         </div><!--/span-->
-
+		
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
           <div class="list-group">
-            <a href="#" class="list-group-item active">主页</a>
-            <a href="./guest/retrieve" class="list-group-item">查询违章信息</a>
+            <a href="../admin" class="list-group-item ">主页</a>
+            <a href="./insert" class="list-group-item active" >生成交通处罚决定书</a>
 			<a href="#" class="list-group-item">扩展</a>
 			<a href="#" class="list-group-item">扩展</a>
 			<a href="#" class="list-group-item">扩展</a>
           </div>
         </div><!--/span-->
       </div><!--/row-->
+	<div class = "col-sm-9" style="text-align:center">
+		<h3><B>公安交通管理简易程序处罚决定书</B></h3>
+	</div>
+	</div>
+	<div class = "container">  
+	 <form class="form-horizontal" role="form" >
+	 <div class="form-group">
+		<label class="col-sm-2 control-label">被处罚人</label>
+		<div class="col-sm-2">
+		<p class="form-control-static"><U><?=$Name?></U></p>
+		</div>
+		<label class="col-sm-2 control-label">驾驶档案证编号</label>
+		<div class="col-sm-3">
+		<p class="form-control-static"><U>无</U></p>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">居民身份证号码</label>
+		<div class="col-sm-7">
+		<p class="form-control-static"><U><?=$ID?></U></p>
+		</div>
+	</div>
+	 <div class="form-group">
+		<label class="col-sm-2 control-label">准驾车型</label>
+		<div class="col-sm-2">
+		<p class="form-control-static"><U>无</U></p>
+		</div>
+		<label class="col-sm-2 control-label">联系方式</label>
+		<div class="col-sm-3">
+		<p class="form-control-static"><U><?=$Contact?></U></p>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">车辆牌号</label>
+		<div class="col-sm-2">
+		<p class="form-control-static"><U><?=$Carnum?></U></p>
+		</div>
+		<label class="col-sm-2 control-label">车辆类型</label>
+		<div class="col-sm-3">
+		<p class="form-control-static"><U><?=$Cartype?></U></p>
+		</div>
+	</div>
+
+	 <div class="form-group">
+		<label class="col-sm-9" style="text-indent:60px">
+		被处罚人所有的机动车于<U><?=$Finetime?></U>，在<U><?=$Fineposition?></U>实施
+		<U><?=$Finetype?></U>的违法行为，决定予以<U><?=$Fine?></U>罚款，记<U><?=$Finescore?></U>
+		</label>
+	</div>
+	 <div class="form-group">
+		<label class="col-sm-9" style="text-indent:60px">
+		如不服本决定，可以在收到决定60日内本单位申请行政复议。
+		</label>
+	</div>		
+  <div class="form-group">
+    <div class="col-sm-offset-1 col-sm-6">
+      <button type="submit" class="btn btn-default">下载</button>
+    </div>
+  </div>
+	</form>
 
       <hr>
 
@@ -100,12 +140,5 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script>
-	$(document).ready(function() {
-	$('[data-toggle=offcanvas]').click(function() {
-    $('.row-offcanvas').toggleClass('active');
-	});
-	});
-	</script>
   </body>
 </html>
