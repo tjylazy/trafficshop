@@ -12,10 +12,10 @@
     <title>客户系统</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../../dist/css/offcanvas.css" rel="stylesheet">
+    <link href="../../../dist/css/offcanvas.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">交通网店</a>
+          <a class="navbar-brand" href="../../..">交通网店</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -53,39 +53,17 @@
 
       <div class="row row-offcanvas row-offcanvas-right">
 
-        <div class="col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-sm-12">
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="jumbotron">
-            <h1>客户，欢迎使用</h1>
+            <h1>图片证据</h1>
           </div>
-          <div class="row">
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>功能提示</h2>
-              <p>您可以在其中查询违章信息和证据。</p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>功能提示</h2>
-              <p>您若对决定书不服可提出上诉。 </p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>功能提示</h2>
-              <p>您可以在本平台进行罚单支付。 </p>
-            </div><!--/span-->
-          </div><!--/row-->
+		  
+		<img src="<?=$file?>"/>
         </div><!--/span-->
-
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">主页</a>
-            <a href="./guest/retrieve" class="list-group-item">查询违章信息</a>
-			<a href="#" class="list-group-item">扩展</a>
-			<a href="#" class="list-group-item">扩展</a>
-			<a href=".." class="list-group-item">登出</a>
-          </div>
-        </div><!--/span-->
-      </div><!--/row-->
+	   </div>
 
       <hr>
 

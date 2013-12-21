@@ -31,7 +31,7 @@
     <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">交通网店</a>
+          <a class="navbar-brand" href="..">交通网店</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -112,19 +112,15 @@
 	 <div class="form-group">
 		<label class="col-sm-9" style="text-indent:60px">
 		被处罚人所有的机动车于<U><?=$Finetime?></U>，在<U><?=$Fineposition?></U>实施
-		<U><?=$Finetype?></U>的违法行为，决定予以<U><?=$Fine?></U>罚款，记<U><?=$Finescore?></U>
+		<U><?=$Finetype?></U>的违法行为，决定予以<U><?=$Fine?></U>元罚款，记<U><?=$Finescore?></U>分。
 		</label>
 	</div>
 	 <div class="form-group">
 		<label class="col-sm-9" style="text-indent:60px">
-		如不服本决定，可以在收到决定60日内本单位申请行政复议。
+		如不服本决定，可以在收到决定60日内向本单位申请行政复议。
 		</label>
 	</div>		
-  <div class="form-group">
-    <div class="col-sm-offset-1 col-sm-6">
-      <button type="submit" class="btn btn-default">下载</button>
-    </div>
-  </div>
+
 	</form>
 
       <hr>

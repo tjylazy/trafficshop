@@ -45,24 +45,27 @@
 
     </div> <!-- /container -->
 	<?php
+
 		if($_POST){
 		$Username = $_POST["Username"];
 		$Password = $_POST["Password"];
-		
-		if ($Username == "admin" and $Password =="admin")
+		foreach ($auser as $key=>$value)
 		{
+			if ($Username == $value['Ausername'] and $Password == $value['Apassword'])
+			{
 			$url = "./admin";
 			echo " <script> window.location.href='$url' </script>";
+			}
 		}
-		else if ($Username == "guest" and $Password =="guest")
+		foreach ($guser as $key=>$value)
 		{
-			$url = "./guest";
-			echo " <script> window.location.href='$url' </script>";
+			if ($Username == $value['Gusername'] and $Password == $value['Gpassword'])
+			{
+				$url = "./guest";
+				echo " <script> window.location.href='$url' </script>";
+			}
 		}
-		else
-		{
 			echo "<script>alert('用户名或密码错误')</script>";
-		}
 		}
 	?>
 

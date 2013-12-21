@@ -82,7 +82,7 @@
             <a href="./admin/insert" class="list-group-item">新增处罚记录</a>
 			<a href="#" class="list-group-item">扩展</a>
 			<a href="#" class="list-group-item">扩展</a>
-			<a href="#" class="list-group-item">扩展</a>
+			<a href=".." class="list-group-item">登出</a>
           </div>
         </div><!--/span-->
       </div><!--/row-->
@@ -100,12 +100,5 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script>
-	$(document).ready(function() {
-	$('[data-toggle=offcanvas]').click(function() {
-    $('.row-offcanvas').toggleClass('active');
-	});
-	});
-	</script>
   </body>
 </html>
