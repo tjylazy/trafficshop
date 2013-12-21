@@ -63,7 +63,7 @@ class Guest extends CI_Controller {
 			echo "<script>alert('申诉成功')</script>";
 		}
 		$mysql->closeDb();
-		$url = "../..";
+		$url = "../retrieve";
 		echo " <script> window.location.href='$url' </script>";
 	}
 	public function pay()
@@ -89,7 +89,7 @@ class Guest extends CI_Controller {
 			echo "<script>alert('已支付过')</script>";
 		}
 		$mysql->closeDb();
-		$url = "../..";
+		$url = "../retrieve";
 		echo " <script> window.location.href='$url' </script>";
 	}
 }
